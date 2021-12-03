@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 function App() {
   const useStyles = makeStyles(() => ({
     App: {
-      backgroundColor: "#505050",
+      backgroundColor: "#282828",
       color: "white",
       minHeight: "100vh",
     },

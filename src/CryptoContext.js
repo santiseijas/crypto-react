@@ -1,17 +1,20 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-
+import { FaDollarSign, FaEuroSign } from "react-icons/fa";
 const Crypto = createContext()
 
 const CryptoContext = ({ children }) => {
 
     const [currency, setCurrency] = useState('USD')
     const [symbol, setSymbol] = useState('$')
-
+    const [icon,setIcon] =useState(FaDollarSign)
+    
     useEffect(() => {
         if (currency === 'USD') {
             setSymbol('$')
+            setIcon(FaDollarSign)
         } else {
             setSymbol('€')
+            setIcon(FaEuroSign)
         }
     }, [currency])
     return (

@@ -83,7 +83,7 @@ export default function CoinsTable() {
     };
     return (
         <ThemeProvider theme={darkTheme}>
-            <Container style={{ textAlign: "center" }}>
+            <Container style={{ textAlign: "center", marginTop:20, }}>
 
                 <TextField
                     label="Search For a Crypto Currency.."

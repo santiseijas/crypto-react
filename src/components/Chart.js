@@ -4,7 +4,6 @@ import { CryptoState } from '../CryptoContext';
 import axios from "axios";
 import { HistoricalChart } from '../config/api';
 import { CircularProgress } from '@material-ui/core'
-import SelectButton from "./SelectButton";
 import { chartDays } from "../config/data";
 import TradingViewWidget, { Themes } from "react-tradingview-widget";
 
@@ -36,9 +35,8 @@ const Chart = ({ coin }) => {
                 thickness={1}
             />
         ) : (
-                [<div style={{ align: 'left', backgroundColor: 'red', width: '600px' }}>
+                [<div style={{ align: 'left', width: '600px',marginTop:-80 }}>
                     <TradingViewWidget
-
                         allow_symbol_change={false}
                         symbol={`${coin.symbol}USD`}
                         theme={Themes.DARK}
@@ -48,7 +46,7 @@ const Chart = ({ coin }) => {
                         save_image={false}
                         hide_top_toolbar={true}
                         hide_side_toolbar={false}
-                        width={'800'}
+                        width={'1210'}
                     />
                 </div>]
             ))

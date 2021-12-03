@@ -2,6 +2,7 @@ import { AppBar, Container, createTheme, makeStyles, MenuItem, MuiThemeProvider,
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { CryptoState } from '../CryptoContext'
+import { FaDollarSign, FaEuroSign } from "react-icons/fa";
 
 
 const useStyles = makeStyles(() => ({
@@ -40,8 +41,8 @@ const Header = () => {
                             value={currency}
                             onChange={(e) => setCurrency(e.target.value)}
                         >
-                            <MenuItem value={'USD'}>USD</MenuItem>
-                            <MenuItem value={'EUR'}>EUR</MenuItem>
+                            <MenuItem value={'USD'}>USD<FaDollarSign/></MenuItem>
+                            <MenuItem value={'EUR'}>EUR<FaEuroSign/></MenuItem>
                         </Select>
                     </Toolbar>
                 </Container>
